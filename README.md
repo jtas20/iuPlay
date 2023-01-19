@@ -1,6 +1,6 @@
 # iuPlay
 Reprodutor De Musica Web...
 
-hospedagem Principal: iuplay.netlify.app
+hospedagem Principal: https://iuplay.netlify.app
 
-hospedagem De Segurança: iuplay.vercel.app
+hospedagem De Segurança: https://iuplay.vercel.app

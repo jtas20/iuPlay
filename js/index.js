@@ -1,9 +1,11 @@
+//MUSICAS
 let musicas = [
-    {img:'imagens/folder_1.jpg', titulo:'Look At Me Now', artista:'Brennan Savage', src:'musicas/Brennan Savage - Look at Me Now.mp3'},
-    {img:'imagens/folder_2.jpg', titulo:'Lonely world', artista:'Brennan Savage', src:'musicas/Brennan Savage - Lonely World.mp3'},
-    {img:'imagens/folder_3.jpg', titulo:'Laugh, I Nearly Died', artista:'The Rolling Stones', src:'musicas/The Rolling Stones - Laugh, I Nearly Died.mp3'}
+    {img:'imagens/folder_1.jpg', titulo:'Look At Me Now', artista:'Brennan Savage', src:'https://dbiuplay.netlify.app/musicas/Brennan%20Savage%20-%20Look%20at%20Me%20Now.mp3'},
+    {img:'imagens/folder_2.jpg', titulo:'Lonely world', artista:'Brennan Savage', src:'https://dbiuplay.netlify.app/musicas/Brennan%20Savage%20-%20Lonely%20World.mp3'},
+    {img:'imagens/folder_3.jpg', titulo:'Laugh, I Nearly Died', artista:'The Rolling Stones', src:'https://dbiuplay.netlify.app/musicas/The%20Rolling%20Stones%20-%20Laugh,%20I%20Nearly%20Died.mp3'}
 ];
 
+//DECLARAÇÕES
 let musica = document.querySelector('audio');
 let indexMusica = 0;
 
@@ -11,6 +13,8 @@ let imagem = document.querySelector('img');
 let nomeMusica = document.querySelector('.descricao h2');
 let nomeArtista = document.querySelector('.descricao i');
 
+//COLOCAR INFORMAÇÕES DA MUSICA ATUAL
+//OU SEJA REDERIZAR
 renderizarMusica(indexMusica);
 
 //EVENTOS

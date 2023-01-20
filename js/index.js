@@ -1,8 +1,14 @@
+showLoading();
+
 //MUSICAS
 let musicas = [
-    {img:'imagens/folder_1.jpg', titulo:'Look At Me Now', artista:'Brennan Savage', src:'https://dbiuplay.netlify.app/musicas/Brennan%20Savage%20-%20Look%20at%20Me%20Now.mp3'},
+    {img:'imagens/folder_1.jpg', titulo:'I Mean It (feat. Remo)', artista:'G-Eazy', src:'https://dbiuplay.netlify.app/musicas/G-Eazy - I Mean It (feat. Remo).mp3'},
     {img:'imagens/folder_2.jpg', titulo:'Lonely world', artista:'Brennan Savage', src:'https://dbiuplay.netlify.app/musicas/Brennan%20Savage%20-%20Lonely%20World.mp3'},
-    {img:'imagens/folder_3.jpg', titulo:'Laugh, I Nearly Died', artista:'The Rolling Stones', src:'https://dbiuplay.netlify.app/musicas/The%20Rolling%20Stones%20-%20Laugh,%20I%20Nearly%20Died.mp3'}
+    {img:'imagens/folder_3.jpg', titulo:'Laugh, I Nearly Died', artista:'The Rolling Stones', src:'https://dbiuplay.netlify.app/musicas/The%20Rolling%20Stones%20-%20Laugh,%20I%20Nearly%20Died.mp3'},
+    {img:'imagens/folder_4.jpg', titulo:'Nightcall', artista:'Kavinsky', src:'https://dbiuplay.netlify.app/musicas/Kavinsky - Nightcall.mp3'},
+    {img:'imagens/folder_5.jpg', titulo:'Look At Me Now', artista:'Brennan Savage', src:'https://dbiuplay.netlify.app/musicas/Brennan%20Savage%20-%20Look%20at%20Me%20Now.mp3'},
+    {img:'imagens/folder_6.jpg', titulo:'All Right Now', artista:'Free', src:'https://dbiuplay.netlify.app/musicas/Free - All Right Now.mp3'},
+    {img:'imagens/folder_7.jpg', titulo:'Bank Account', artista:'21 Savage', src:'https://dbiuplay.netlify.app/musicas/21 Savage - Bank Account.mp3'}
 ];
 
 //DECLARAÇÕES
@@ -28,7 +34,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
     indexMusica--;
 
     if(indexMusica < 0){
-        indexMusica = 2;
+        indexMusica = 6;
     }
 
     renderizarMusica(indexMusica);
@@ -38,7 +44,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
 document.querySelector('.proxima').addEventListener('click', () => {
     indexMusica++;
 
-    if(indexMusica > 2){
+    if(indexMusica > 6){
         indexMusica = 0;
     }
 
@@ -48,16 +54,19 @@ document.querySelector('.proxima').addEventListener('click', () => {
 
 //FUNÇÕES
 function renderizarMusica(index){
+    showLoading();
     musica.setAttribute('src', musicas[index].src);
     musica.addEventListener('loadeddata', () => {
         imagem.src = musicas[index].img;
         nomeMusica.textContent = musicas[index].titulo;
         nomeArtista.textContent = musicas[index].artista;
         duracao();
+        hideLoading();
 
         if(indexMusica > 0){
             tocarMusica();
         }
+
     });
 }
 
@@ -103,4 +112,14 @@ function duracao(){
         duracaoMusica.textContent = segundosParaMinuto(Math.floor(musica.duration));
     }
     setInterval(duracaoNow, 1000);
+}
+
+function showLoading(){
+    var divLoading = document.getElementById('loading');
+    divLoading.style.display = 'flex'; 
+}
+
+function hideLoading(){
+    var divLoading = document.getElementById('loading');
+    divLoading.style.display = 'none'; 
 }

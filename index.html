@@ -17,7 +17,12 @@
     <link rel='stylesheet' href='style/index.css'>
     <title>iuplay</title>
 </head>
-<body>
+<body onload="hideLoading();">
+    <!--Loading-->
+	<div class="loading" id='loading'>
+		<span class="spinner"></span>
+	</div>
+
     <img src='imagens/folder_1.jpg' alt='imagem nao carregada com sucesso'>
     <div class='descricao'>
         <h2>Nome Da Musica</h2>

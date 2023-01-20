@@ -8,7 +8,9 @@ let musicas = [
     {img:'imagens/folder_4.jpg', titulo:'Nightcall', artista:'Kavinsky', src:'https://dbiuplay.netlify.app/musicas/Kavinsky - Nightcall.mp3'},
     {img:'imagens/folder_5.jpg', titulo:'Look At Me Now', artista:'Brennan Savage', src:'https://dbiuplay.netlify.app/musicas/Brennan%20Savage%20-%20Look%20at%20Me%20Now.mp3'},
     {img:'imagens/folder_6.jpg', titulo:'All Right Now', artista:'Free', src:'https://dbiuplay.netlify.app/musicas/Free - All Right Now.mp3'},
-    {img:'imagens/folder_7.jpg', titulo:'Bank Account', artista:'21 Savage', src:'https://dbiuplay.netlify.app/musicas/21 Savage - Bank Account.mp3'}
+    {img:'imagens/folder_7.jpg', titulo:'Bank Account', artista:'21 Savage', src:'https://dbiuplay.netlify.app/musicas/21 Savage - Bank Account.mp3'},
+    {img:'imagens/folder_8.jpg', titulo:'Home', artista:'Machine Gun Kelly', src:'https://dbiuplay.netlify.app/musicas/Machine Gun Kelly - Home.mp3'},
+    {img:'imagens/folder_9.jpg', titulo:'Wanted Dead Or Alive', artista:'Bon Jovi', src:'https://dbiuplay.netlify.app/musicas/Bon Jovi - Wanted Dead Or Alive.mp3'}
 ];
 
 //DECLARAÇÕES
@@ -34,7 +36,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
     indexMusica--;
 
     if(indexMusica < 0){
-        indexMusica = 6;
+        indexMusica = 8;
     }
 
     renderizarMusica(indexMusica);
@@ -44,7 +46,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
 document.querySelector('.proxima').addEventListener('click', () => {
     indexMusica++;
 
-    if(indexMusica > 6){
+    if(indexMusica > 8){
         indexMusica = 0;
     }
 

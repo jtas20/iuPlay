@@ -10,7 +10,8 @@ let musicas = [
     {img:'imagens/folder_6.jpg', titulo:'All Right Now', artista:'Free', src:'https://dbiuplay.netlify.app/musicas/Free - All Right Now.mp3'},
     {img:'imagens/folder_7.jpg', titulo:'Bank Account', artista:'21 Savage', src:'https://dbiuplay.netlify.app/musicas/21 Savage - Bank Account.mp3'},
     {img:'imagens/folder_8.jpg', titulo:'Home', artista:'Machine Gun Kelly', src:'https://dbiuplay.netlify.app/musicas/Machine Gun Kelly - Home.mp3'},
-    {img:'imagens/folder_9.jpg', titulo:'Wanted Dead Or Alive', artista:'Bon Jovi', src:'https://dbiuplay.netlify.app/musicas/Bon Jovi - Wanted Dead Or Alive.mp3'}
+    {img:'imagens/folder_9.jpg', titulo:'Wanted Dead Or Alive', artista:'Bon Jovi', src:'https://dbiuplay.netlify.app/musicas/Bon Jovi - Wanted Dead Or Alive.mp3'},
+    {img:'imagens/folder_10.jpg', titulo:'I Feel Like I-m Drowning', artista:'Two Feet', src:'https://dbiuplay.netlify.app/musicas/Two Feet - I Feel Like I-m Drowning.mp3'}
 ];
 
 //DECLARAÇÕES
@@ -36,7 +37,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
     indexMusica--;
 
     if(indexMusica < 0){
-        indexMusica = 8;
+        indexMusica = 9;
     }
 
     renderizarMusica(indexMusica);
@@ -46,7 +47,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
 document.querySelector('.proxima').addEventListener('click', () => {
     indexMusica++;
 
-    if(indexMusica > 8){
+    if(indexMusica > 9){
         indexMusica = 0;
     }
 

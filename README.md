@@ -1,5 +1,5 @@
 # iuPlay
-Reprodutor De Musica Web...
+Clone Do Spotify - Reprodutor Web
 
 hospedagem Principal: https://iuplay.netlify.app
 
